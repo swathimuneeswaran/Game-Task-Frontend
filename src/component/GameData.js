@@ -1,4 +1,3 @@
-// GameData.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -11,13 +10,12 @@ const GameData = () => {
         const response = await axios.get('https://game-task-backend.onrender.com/api/get-games');
         setGames(response.data.games);
       } catch (error) {
-        console.error('Error fetching game data:', error);
+        console.error('Error fetching game data:', error.response ? error.response.data : error.message);
       }
     };
-  
+
     fetchGames();
   }, []);
-  
 
   return (
     <div>
