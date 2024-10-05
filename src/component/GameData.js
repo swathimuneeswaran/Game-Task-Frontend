@@ -8,15 +8,16 @@ const GameData = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get('https://game-task-backend.onrender.com/api/get-games'); // Adjust the URL as needed
+        const response = await axios.get('https://game-task-backend.onrender.com/api/get-games');
         setGames(response.data.games);
       } catch (error) {
         console.error('Error fetching game data:', error);
       }
     };
-
+  
     fetchGames();
   }, []);
+  
 
   return (
     <div>
