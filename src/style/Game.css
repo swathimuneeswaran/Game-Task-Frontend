@@ -1,0 +1,57 @@
+/* GameData.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Light grey background */
+    color: #343a40; /* Dark text */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for the title */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+  }
+  
+  li {
+    background-color: #ffffff; /* White background for each game */
+    border: 1px solid #dee2e6; /* Grey border */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: box-shadow 0.3s;
+    background-color: #f8f9fa; /* Light background for list items */
+  }
+  
+  li:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: #d3e0ea; /* Slightly darker background on hover */
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #343a40; /* Darker text for game titles */
+  }
+  
+  p {
+    margin: 5px 0 0;
+    color: #6c757d; /* Grey text for rounds */
+  }
+  
+  .no-games {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d; /* Grey color for no games message */
+    background-color: #f8f9fa; /* Light background for the no games message */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
