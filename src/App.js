@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Game from '../src/component/Game.js';
-import GameData from './component/GameData.js';
+import GameData from '../src/component/GameData.js';
 
 
 const App = () => {
