@@ -49,7 +49,7 @@ const Game = () => {
     };
     console.log("Request Body:", requestBody);
 
-    axios.post('http://localhost:5000/api/save-game', requestBody)
+    axios.post('https://game-task-backend.onrender.com/api/save-game', requestBody)
       .then(response => {
         console.log("Response from server:", response.data);
         alert('Game saved successfully!');
