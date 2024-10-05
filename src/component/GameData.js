@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "../style/GameData.css"
 
 const GameData = () => {
   const [games, setGames] = useState([]);
@@ -23,14 +24,30 @@ const GameData = () => {
       {games.length === 0 ? (
         <p>No games saved yet.</p>
       ) : (
-        <ul>
-          {games.map((game) => (
-            <li key={game.id}>
-              <h3>{game.player1Name} vs {game.player2Name}</h3>
-              <p>Rounds: {JSON.stringify(game.rounds)}</p>
-            </li>
-          ))}
-        </ul>
+        <table className="game-table">
+          <thead>
+            <tr>
+              <th>Player 1</th>
+              <th>Player 2</th>
+              <th>Rounds</th>
+            </tr>
+          </thead>
+          <tbody>
+            {games.map((game) => (
+              <tr key={game.id}>
+                <td>{game.player1name}</td>
+                <td>{game.player2name}</td>
+                <td>
+                  {game.rounds.map((round, index) => (
+                    <div key={index}>
+                      <strong>{round.winner}</strong>: {round.player1Choice} vs {round.player2Choice}
+                    </div>
+                  ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
