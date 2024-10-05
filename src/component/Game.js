@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios';
-import "../style/Game.css"
+import '../style/Game.css';
 
 const Game = () => {
   const [rounds, setRounds] = useState([]);
@@ -75,9 +76,17 @@ const Game = () => {
     console.log("Player 1 chose:", choice);  // Debugging log
   };
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const navigateToGameData = () => {
+    navigate('/gamedata'); // Navigate to GameData page
+  };
+
   return (
     <div>
       <h1>Stone Paper Scissors</h1>
+
+      <button style={{margin:"40px",cursor:"pointer",backgroundColor:"grey",color:"white",border:"none"}} onClick={navigateToGameData}>View Saved Games</button> {/* Button to navigate */}
 
       <div>
         <input
